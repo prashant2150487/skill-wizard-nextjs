@@ -1,0 +1,37 @@
+.container {
+  font-family: var(--font-mulish);
+
+  h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .fieldContainer {
+    margin-bottom: 1rem;
+
+    input {
+      width: 100%;
+      padding: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .error {
+      color: red;
+      font-size: 0.875rem;
+    }
+  }
+
+  .submitButton {
+    background-color: #6200ea;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #3700b3;
+    }
+  }
+}

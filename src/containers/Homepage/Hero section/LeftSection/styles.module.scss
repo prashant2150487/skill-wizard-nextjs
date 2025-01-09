@@ -1,0 +1,23 @@
+@use '../../../../styles/theme' as *;
+
+.container {
+  @include breakpoints('sm') {
+    max-width: 440px;
+  }
+
+  h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+  }
+
+  .description-container {
+    font-family: var(--font-mulish);
+  }
+}

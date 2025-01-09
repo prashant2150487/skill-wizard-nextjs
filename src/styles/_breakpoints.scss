@@ -1,0 +1,71 @@
+$breakpoints: (
+    'xs': (
+        min-width: 425px,
+    ),
+    'sm': (
+        min-width: 640px,
+    ),
+    'md': (
+        min-width: 768px,
+    ),
+    'lg': (
+        min-width: 1024px,
+    ),
+    'xl': (
+        min-width: 1440px,
+    ),
+    '2xl': (
+        min-width: 1536px,
+    ),
+    '3xl': (
+        min-width: 1920px,
+    ),
+) !default;
+
+// Mobile First Approach
+@mixin breakpoints($breakpoint) {
+    // If the key exists in the map
+    @if map-has-key($breakpoints, $breakpoint) {
+        // Prints a media query based on the value
+        @media #{inspect(map-get($breakpoints, $breakpoint))} {
+            @content;
+        }
+    }
+
+    // If the key doesn't exist in the map
+    @else {
+        @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+          + "Available breakpoints are: #{map-keys($breakpoints)}.";
+    }
+}
+
+@mixin scrollbar-styles {
+    &::-webkit-scrollbar {
+        width: 4px !important;
+        display: block !important;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: #f36343 !important;
+        border-radius: 16px !important;
+        height: 12px !important;
+    }
+
+    &::-webkit-scrollbar-track {
+        background-color: #d9d9d9 !important;
+    }
+}
+
+@mixin text-style(
+    $font-family: 'Lato',
+    $font-size: 14px,
+    $font-weight: 500,
+    $line-height: 20px,
+    $color: #ffffff
+) {
+    font-family: $font-family, sans-serif;
+    font-size: $font-size;
+    font-weight: $font-weight;
+    line-height: $line-height;
+    color: $color;
+}

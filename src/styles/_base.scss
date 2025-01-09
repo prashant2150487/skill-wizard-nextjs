@@ -1,0 +1,71 @@
+html {
+    box-sizing: border-box;
+    --webkit-font-smoothing: antialiased;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: inherit;
+    color: inherit;
+}
+
+input {
+    border: unset;
+}
+
+button {
+    border: unset;
+    background-color: unset;
+}
+
+/* Hide scrollbar for WebKit browsers */
+*::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE and Edge */
+* {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+/* Styling for Firefox */
+* {
+    scrollbar-color: var(--custom-scrollbar-color) transparent; /* Adjust as needed */
+    scrollbar-width: var(--custom-scrollbar-width); /* Adjust as needed */
+}
+
+:root {
+    font-size: 62.5%;
+    --container-max-width: 1440px;
+    --sm: 640px;
+    --md: 768px;
+    --lg: 1024px;
+    --xl: 1280px;
+    --2xl: 1536px;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: 'Poppins', sans-serif;
+    background-color: #edf2f9;
+}
+
+.leaflet-control-attribution,
+.leaflet-control {
+    display: none;
+}
+
+.rs-pagination-btn-active {
+    background-color: #625bf6 !important; /* Set the selected page background color */
+    color: white !important; /* Optional: Set text color */
+    border-color: #625bf6 !important; /* Optional: Ensure border matches */
+    border-radius: 0px !important;
+}
