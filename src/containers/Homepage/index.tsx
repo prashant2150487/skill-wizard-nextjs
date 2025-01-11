@@ -8,6 +8,8 @@ import { Badge } from '@/components/ui/badge'
 
 import styles from './styles.module.scss'
 import CourseContainer from './Course'
+import Header from './Header'
+import Footer from './Footer'
 
 const HomePageSkillFun = () => {
   const emojis = [
@@ -71,12 +73,14 @@ const HomePageSkillFun = () => {
 
   return (
     <div>
+      <Header />
       <HeroSection />
       <FeedbackContainer />
       <CourseContainer />
       <FaqContainer />
       <MarqueeContainer />
       <FallingObjects items={emojis} />
+      <Footer />
       <div style={{ height: '300px', backgroundColor: '#2E31A6' }} />
     </div>
   )
